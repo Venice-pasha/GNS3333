@@ -1,0 +1,332 @@
+{
+    "networks": [
+        {
+            "autonomous_system": "AS X",
+            "protocol": "RIP",
+            "loopback": "100::",
+            "loopback_masque": "128",
+            "IP": "2000:100:100::",
+            "IP_masque": "64",
+            "routers": [
+                {
+                    "router_id": "R1",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R2",
+                            "interface_connect": "0"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R3",
+                            "interface_connect": "0"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R2",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R1",
+                            "interface_connect": "0"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R3",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "2",
+                            "connected_to": "R4",
+                            "interface_connect": "0"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R3",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R1",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R2",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "2",
+                            "connected_to": "R5",
+                            "interface_connect": "0"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R4",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R2",
+                            "interface_connect": "2"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R5",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "2",
+                            "connected_to": "R7",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "3",
+                            "connected_to": "R6",
+                            "interface_connect": "0"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R5",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R3",
+                            "interface_connect": "2"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R4",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "2",
+                            "connected_to": "R6",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "3",
+                            "connected_to": "R7",
+                            "interface_connect": "0"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R6",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R4",
+                            "interface_connect": "3"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R5",
+                            "interface_connect": "2"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R7",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R5",
+                            "interface_connect": "3"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R4",
+                            "interface_connect": "2"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "autonomous_system": "AS Y",
+            "protocol": "OSPF",
+            "loopback": "101::",
+            "loopback_masque": "128",
+            "IP": "2000:100:101::",
+            "IP_masque": "64",
+            "routers": [
+                {
+                    "router_id": "R8",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": null,
+                            "interface_connect":null
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R11",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "2",
+                            "connected_to": "R10",
+                            "interface_connect": "0"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R9",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "null",
+                            "interface_connect":"null"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R10",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "2",
+                            "connected_to": "R11",
+                            "interface_connect": "0"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R10",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R8",
+                            "interface_connect": "2"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R9",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "2",
+                            "connected_to": "R11",
+                            "interface_connect": "2"
+                        },
+                        {
+                            "interface": "3",
+                            "connected_to": "R12",
+                            "interface_connect": "0"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R11",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R9",
+                            "interface_connect": "2"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R8",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "2",
+                            "connected_to": "R10",
+                            "interface_connect": "2"
+                        },
+                        {
+                            "interface": "3",
+                            "connected_to": "R13",
+                            "interface_connect": "0"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R12",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R10",
+                            "interface_connect": "3"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R13",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "2",
+                            "connected_to": "R14",
+                            "interface_connect": "0"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R13",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R11",
+                            "interface_connect": "3"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R12",
+                            "interface_connect": "1"
+                        },
+                        {
+                            "interface": "2",
+                            "connected_to": "R14",
+                            "interface_connect": "1"
+                        }
+                    ]
+                },
+                {
+                    "router_id": "R14",
+                    "interfaces": [
+                        {
+                            "interface": "0",
+                            "connected_to": "R12",
+                            "interface_connect": "2"
+                        },
+                        {
+                            "interface": "1",
+                            "connected_to": "R13",
+                            "interface_connect": "2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "interconnections": [
+        {
+            "autonomous_system_1": "AS X",
+            "autonomous_system_2": "AS Y",
+            "preference_1": "company",
+            "preference_2": "school",
+            "ip_interconnection": "2000:100:102::",
+            "subnet_mask": "64",
+            "router_name1": "R6",
+            "router_name2":"R8",
+            "interface1":"2",
+            "interface2":"0",
+            "protocol": "BGP"
+        },
+        {
+            "autonomous_system_1": "AS X",
+            "autonomous_system_2": "AS Y",
+            "preference_1": "company",
+            "preference_2": "school",
+            "ip_interconnection": "2000:100:103::",
+            "subnet_mask": "64",
+            "router_name1": "R7",
+            "router_name2":"R9",
+            "interface1":"2",
+            "interface2":"0",
+            "protocol": "BGP"
+        }
+    ]
+}

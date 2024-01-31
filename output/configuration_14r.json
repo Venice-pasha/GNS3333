@@ -1,0 +1,788 @@
+{
+    "routers": [
+        {
+            "ip_version": 6,
+            "ip": "2000:100:100::1",
+            "router_id": "R1",
+            "iBGP_protocol": "RIP",
+            "eBGP": "0",
+            "eBGP_interface": null,
+            "loopback": "100::1",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:100::2",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R2",
+                    "dist_r_ip": "2000:100:100::4",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:100::5"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:100::3",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R3",
+                    "dist_r_ip": "2000:100:100::8",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:100::9"
+                },
+                {
+                    "enable": "0",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": null,
+                    "subnet_mask": null,
+                    "cost": null,
+                    "dist_r": null,
+                    "dist_r_ip": null,
+                    "dist_i": null,
+                    "dist_i_ip": null
+                },
+                {
+                    "enable": "0",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": null,
+                    "subnet_mask": null,
+                    "cost": null,
+                    "dist_r": null,
+                    "dist_r_ip": null,
+                    "dist_i": null,
+                    "dist_i_ip": null
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:100::4",
+            "router_id": "R2",
+            "iBGP_protocol": "RIP",
+            "eBGP": "0",
+            "eBGP_interface": null,
+            "loopback": "100::4",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:100::5",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R1",
+                    "dist_r_ip": "2000:100:100::1",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:100::2"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:100::6",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R3",
+                    "dist_r_ip": "2000:100:100::8",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:100::10"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:100::7",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R4",
+                    "dist_r_ip": "2000:100:100::12",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:100::13"
+                },
+                {
+                    "enable": "0",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": null,
+                    "subnet_mask": null,
+                    "cost": null,
+                    "dist_r": null,
+                    "dist_r_ip": null,
+                    "dist_i": null,
+                    "dist_i_ip": null
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:100::8",
+            "router_id": "R3",
+            "iBGP_protocol": "RIP",
+            "eBGP": "0",
+            "eBGP_interface": null,
+            "loopback": "100::8",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:100::9",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R1",
+                    "dist_r_ip": "2000:100:100::1",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:100::3"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:100::10",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R2",
+                    "dist_r_ip": "2000:100:100::4",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:100::6"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:100::11",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R5",
+                    "dist_r_ip": "2000:100:100::17",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:100::18"
+                },
+                {
+                    "enable": "0",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": null,
+                    "subnet_mask": null,
+                    "cost": null,
+                    "dist_r": null,
+                    "dist_r_ip": null,
+                    "dist_i": null,
+                    "dist_i_ip": null
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:100::12",
+            "router_id": "R4",
+            "iBGP_protocol": "RIP",
+            "eBGP": "0",
+            "eBGP_interface": null,
+            "loopback": "100::12",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:100::13",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R2",
+                    "dist_r_ip": "2000:100:100::4",
+                    "dist_i": "2",
+                    "dist_i_ip": "2000:100:100::7"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:100::14",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R5",
+                    "dist_r_ip": "2000:100:100::17",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:100::19"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:100::15",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R7",
+                    "dist_r_ip": "2000:100:100::25",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:100::27"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": "2000:100:100::16",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R6",
+                    "dist_r_ip": "2000:100:100::22",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:100::23"
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:100::17",
+            "router_id": "R5",
+            "iBGP_protocol": "RIP",
+            "eBGP": "0",
+            "eBGP_interface": null,
+            "loopback": "100::17",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:100::18",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R3",
+                    "dist_r_ip": "2000:100:100::8",
+                    "dist_i": "2",
+                    "dist_i_ip": "2000:100:100::11"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:100::19",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R4",
+                    "dist_r_ip": "2000:100:100::12",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:100::14"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:100::20",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R6",
+                    "dist_r_ip": "2000:100:100::22",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:100::24"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": "2000:100:100::21",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R7",
+                    "dist_r_ip": "2000:100:100::25",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:100::26"
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:100::22",
+            "router_id": "R6",
+            "iBGP_protocol": "RIP",
+            "eBGP": "1",
+            "eBGP_interface": "2",
+            "loopback": "100::22",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:100::23",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R4",
+                    "dist_r_ip": "2000:100:100::12",
+                    "dist_i": "3",
+                    "dist_i_ip": "2000:100:100::16"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:100::24",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R5",
+                    "dist_r_ip": "2000:100:100::17",
+                    "dist_i": "2",
+                    "dist_i_ip": "2000:100:100::20"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:102::1",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R8",
+                    "dist_r_ip": "2000:100:101::1",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:102::2"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": "2000:100:100::21",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R7",
+                    "dist_r_ip": "2000:100:100::25",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:100::26"
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:100::25",
+            "router_id": "R7",
+            "iBGP_protocol": "RIP",
+            "eBGP": "1",
+            "eBGP_interface": "2",
+            "loopback": "100::25",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:100::26",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R5",
+                    "dist_r_ip": "2000:100:100::17",
+                    "dist_i": "3",
+                    "dist_i_ip": "2000:100:100::21"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:100::27",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R4",
+                    "dist_r_ip": "2000:100:100::12",
+                    "dist_i": "2",
+                    "dist_i_ip": "2000:100:100::15"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:103::1",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R9",
+                    "dist_r_ip": "2000:100:101::4",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:103::2"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": "2000:100:100::21",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R7",
+                    "dist_r_ip": "2000:100:100::25",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:100::26"
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:101::1",
+            "router_id": "R8",
+            "iBGP_protocol": "OSPF",
+            "eBGP": "1",
+            "eBGP_interface": "0",
+            "loopback": "101::1",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:102::2",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R6",
+                    "dist_r_ip": "2000:100:100::22",
+                    "dist_i": 2,
+                    "dist_i_ip": "2000:100:102::1"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:101::2",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R11",
+                    "dist_r_ip": "2000:100:101::13",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:101::15"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:101::3",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R10",
+                    "dist_r_ip": "2000:100:101::8",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:101::9"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": "2000:100:100::21",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R7",
+                    "dist_r_ip": "2000:100:100::25",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:100::26"
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:101::4",
+            "router_id": "R9",
+            "iBGP_protocol": "OSPF",
+            "eBGP": "1",
+            "eBGP_interface": "0",
+            "loopback": "101::4",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:103::2",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R7",
+                    "dist_r_ip": "2000:100:100::25",
+                    "dist_i": 2,
+                    "dist_i_ip": "2000:100:103::1"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:101::6",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R10",
+                    "dist_r_ip": "2000:100:101::8",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:101::10"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:101::7",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R11",
+                    "dist_r_ip": "2000:100:101::13",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:101::14"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": "2000:100:100::21",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R7",
+                    "dist_r_ip": "2000:100:100::25",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:100::26"
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:101::8",
+            "router_id": "R10",
+            "iBGP_protocol": "OSPF",
+            "eBGP": "0",
+            "eBGP_interface": null,
+            "loopback": "101::8",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:101::9",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R8",
+                    "dist_r_ip": "2000:100:101::1",
+                    "dist_i": "2",
+                    "dist_i_ip": "2000:100:101::3"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:101::10",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R9",
+                    "dist_r_ip": "2000:100:101::4",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:101::6"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:101::11",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R11",
+                    "dist_r_ip": "2000:100:101::13",
+                    "dist_i": "2",
+                    "dist_i_ip": "2000:100:101::16"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": "2000:100:101::12",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R12",
+                    "dist_r_ip": "2000:100:101::18",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:101::19"
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:101::13",
+            "router_id": "R11",
+            "iBGP_protocol": "OSPF",
+            "eBGP": "0",
+            "eBGP_interface": null,
+            "loopback": "101::13",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:101::14",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R9",
+                    "dist_r_ip": "2000:100:101::4",
+                    "dist_i": "2",
+                    "dist_i_ip": "2000:100:101::7"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:101::15",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R8",
+                    "dist_r_ip": "2000:100:101::1",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:101::2"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:101::16",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R10",
+                    "dist_r_ip": "2000:100:101::8",
+                    "dist_i": "2",
+                    "dist_i_ip": "2000:100:101::11"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": "2000:100:101::17",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R13",
+                    "dist_r_ip": "2000:100:101::22",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:101::23"
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:101::18",
+            "router_id": "R12",
+            "iBGP_protocol": "OSPF",
+            "eBGP": "0",
+            "eBGP_interface": null,
+            "loopback": "101::18",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:101::19",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R10",
+                    "dist_r_ip": "2000:100:101::8",
+                    "dist_i": "3",
+                    "dist_i_ip": "2000:100:101::12"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:101::20",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R13",
+                    "dist_r_ip": "2000:100:101::22",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:101::24"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:101::21",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R14",
+                    "dist_r_ip": "2000:100:101::26",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:101::27"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": "2000:100:101::17",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R13",
+                    "dist_r_ip": "2000:100:101::22",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:101::23"
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:101::22",
+            "router_id": "R13",
+            "iBGP_protocol": "OSPF",
+            "eBGP": "0",
+            "eBGP_interface": null,
+            "loopback": "101::22",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:101::23",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R11",
+                    "dist_r_ip": "2000:100:101::13",
+                    "dist_i": "3",
+                    "dist_i_ip": "2000:100:101::17"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:101::24",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R12",
+                    "dist_r_ip": "2000:100:101::18",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:101::20"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:101::25",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R14",
+                    "dist_r_ip": "2000:100:101::26",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:101::28"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": "2000:100:101::17",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R13",
+                    "dist_r_ip": "2000:100:101::22",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:101::23"
+                }
+            ]
+        },
+        {
+            "ip_version": 6,
+            "ip": "2000:100:101::26",
+            "router_id": "R14",
+            "iBGP_protocol": "OSPF",
+            "eBGP": "0",
+            "eBGP_interface": null,
+            "loopback": "101::26",
+            "loopback_masque": "128",
+            "interfaces": [
+                {
+                    "enable": "1",
+                    "interface_name": "FastEthernet0/0",
+                    "ip_address": "2000:100:101::27",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R12",
+                    "dist_r_ip": "2000:100:101::18",
+                    "dist_i": "2",
+                    "dist_i_ip": "2000:100:101::21"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet1/0",
+                    "ip_address": "2000:100:101::28",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R13",
+                    "dist_r_ip": "2000:100:101::22",
+                    "dist_i": "2",
+                    "dist_i_ip": "2000:100:101::25"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet2/0",
+                    "ip_address": "2000:100:101::25",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R14",
+                    "dist_r_ip": "2000:100:101::26",
+                    "dist_i": "1",
+                    "dist_i_ip": "2000:100:101::28"
+                },
+                {
+                    "enable": "1",
+                    "interface_name": "GigabitEthernet3/0",
+                    "ip_address": "2000:100:101::17",
+                    "subnet_mask": "64",
+                    "cost": null,
+                    "dist_r": "R13",
+                    "dist_r_ip": "2000:100:101::22",
+                    "dist_i": "0",
+                    "dist_i_ip": "2000:100:101::23"
+                }
+            ]
+        }
+    ]
+}

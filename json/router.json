@@ -1,0 +1,56 @@
+{
+      "ip_version":null,
+      "ip":null,
+      "router_id": null,
+      "iBGP_protocol":null,
+      "eBGP":"0",
+      "eBGP_interface":null,
+      "loopback":null,
+      "loopback_masque":null,
+      "interfaces": [
+        {
+          "enable":"0",
+          "interface_name": "FastEthernet0/0",
+          "ip_address": null,
+          "subnet_mask": null,
+          "cost": null,
+          "dist_r":null,
+          "dist_r_ip":null,
+          "dist_i":null,
+          "dist_i_ip":null
+        },
+        {
+            "enable":"0",
+            "interface_name": "GigabitEthernet1/0",
+            "ip_address": null,
+            "subnet_mask": null,
+            "cost": null,
+            "dist_r":null,
+            "dist_r_ip":null,
+            "dist_i":null,
+            "dist_i_ip":null
+          },
+          {
+            "enable":"0",
+            "interface_name": "GigabitEthernet2/0",
+            "ip_address": null,
+            "subnet_mask": null,
+            "cost": null,
+            "dist_r":null,
+            "dist_r_ip":null,
+            "dist_i":null,
+            "dist_i_ip":null
+          },
+          {
+            "enable":"0",
+            "interface_name": "GigabitEthernet3/0",
+            "ip_address": null,
+            "subnet_mask": null,
+            "cost": null,
+            "dist_r":null,
+            "dist_r_ip":null,
+            "dist_i":null,
+            "dist_i_ip":null
+          }
+      ]
+}

@@ -1,0 +1,107 @@
+{
+  "networks": [
+    {
+      "autonomous_system": "AS X",
+      "protocol": "RIP",
+      "loopback":"100::",
+      "loopback_masque":"128",
+      "IP":"2000:100:100::",
+      "IP_masque":"64",
+      "routers":[
+        {
+          "router_id": "R1",
+          "interfaces": [
+            {
+              "interface": "0",
+              "connected_to": "R2",
+              "interface_connect":"0"
+            }
+          ]
+        },
+        {
+          "router_id": "R2",
+          "interfaces": [
+            {
+              "interface": "0",
+              "connected_to": "R1",
+              "interface_connect":"0"
+            },
+            {
+              "interface": "1",
+              "connected_to": "R3",
+              "interface_connect":"0"
+             }
+          ]
+        },
+        {
+          "router_id": "R3",
+          "interfaces": [
+            {
+              "interface": "0",
+              "connected_to": "R2",
+              "interface_connect": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "autonomous_system": "AS Y",
+      "protocol": "OSPF",
+      "loopback":"101::",
+      "loopback_masque":"128",
+      "IP":"2000:100:101::",
+      "IP_masque":"64",
+      "routers": [
+        {
+          "router_id": "R4",
+          "interfaces": [
+            {
+              "interface": "0",
+              "connected_to": "R5",
+              "interface_connect":"0"
+            }
+          ]
+        },
+        {
+          "router_id": "R5",
+          "interfaces": [
+            {
+              "interface": "0",
+              "connected_to": "R4",
+              "interface_connect": "0"
+            },
+            {
+              "interface": "1",
+              "connected_to": "R6",
+              "interface_connect":"0"
+             }
+          ]
+        },
+        {
+          "router_id": "R6",
+          "interfaces": [
+            {
+              "interface": "0",
+              "connected_to": "R5",
+              "interface_connect": "1"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "interconnection": 
+    {
+      "autonomous_system_1":"AS X",
+      "autonomous_system_2":"AS Y",
+      "preference":["company","school"],
+      "ip_interconnection":"2000:100:102::",
+      "subnet_mask":"64",
+      "router_info": [
+        ["R3","1","client"],
+        ["R4","1","server"]
+      ],
+      "protocol":"BGP"
+    }
+}
