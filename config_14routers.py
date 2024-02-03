@@ -2,6 +2,7 @@ import json
 import os
 import copy
 import func as f
+import re
 
 # find and read json file
 path = os.path.abspath(__file__)
@@ -20,7 +21,7 @@ list_router=[]
 
 #RIP/OSPF_basic,start with intent file
 for network in data["networks"]:
-    ip_auto=1
+    list_connexion=[]
     as_id = network["autonomous_system"]
     loopback = network["loopback"] 
     loopback_masque=network["loopback_masque"]
@@ -28,27 +29,32 @@ for network in data["networks"]:
     ip_masque=network["IP_masque"]
     routers=network["routers"]
     protocol = network["protocol"]
+    ip_interface_start=ip[:-1]
     for i, router in enumerate(routers):
-        temp=router_basic
+        temp=copy.deepcopy(router_basic)
         router_id=router["router_id"]
+        match = re.search(r'R(\d+)', router_id)
+        if match:
+            id_number=match.group(1)
+        temp["BGP_ip"]=f"{id_number}:{id_number}:{id_number}:{id_number}"
         temp["ip_version"]=6
-        temp["ip"]=f"{ip}{ip_auto}"
         temp["iBGP_protocol"]=protocol
         temp["loopback_masque"]=loopback_masque
-        temp["loopback"]=f"{loopback}{ip_auto}"
+        temp["loopback"]=f"{loopback}{id_number}"
         temp["router_id"]=router_id
-        ip_auto+=1
+
         for j,interface in enumerate(router["interfaces"]):
             connected_to=interface["connected_to"]
             if connected_to==None:
                 continue
             interface_connect=interface["interface_connect"]
             temp["interfaces"][j]["enable"]="1"
-            temp["interfaces"][j]["ip_address"]=f"{ip}{ip_auto}"
-            ip_auto+=1
             temp["interfaces"][j]["subnet_mask"]=ip_masque
             temp["interfaces"][j]["dist_r"]=connected_to
             temp["interfaces"][j]["dist_i"]=interface_connect
+            ip_interface_fin=f.connexion_router(list_connexion,router_id,connected_to)
+            temp["interfaces"][j]["ip_address"]=f"{ip_interface_start}{ip_interface_fin}"
+            print(f"connexion of {router_id} and {connected_to} established!")
         print (f"configuration of {router_id} finished")
         list_router.append(copy.deepcopy(temp))
     print(f"first step configuration of {protocol} finished")

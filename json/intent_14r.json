@@ -178,8 +178,8 @@
                     "interfaces": [
                         {
                             "interface": "0",
-                            "connected_to": "null",
-                            "interface_connect":"null"
+                            "connected_to": null,
+                            "interface_connect":null
                         },
                         {
                             "interface": "1",
@@ -307,7 +307,7 @@
             "autonomous_system_2": "AS Y",
             "preference_1": "company",
             "preference_2": "school",
-            "ip_interconnection": "2000:100:102::",
+            "ip_interconnection": "2000:100:102:1::",
             "subnet_mask": "64",
             "router_name1": "R6",
             "router_name2":"R8",
@@ -320,7 +320,7 @@
             "autonomous_system_2": "AS Y",
             "preference_1": "company",
             "preference_2": "school",
-            "ip_interconnection": "2000:100:103::",
+            "ip_interconnection": "2000:100:102:2::",
             "subnet_mask": "64",
             "router_name1": "R7",
             "router_name2":"R9",
